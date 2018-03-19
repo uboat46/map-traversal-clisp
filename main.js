@@ -19,7 +19,7 @@ function transform(data) {
 
 
 function run(data) {
-  let ls = spawn('clisp', ['-x', '-q', data])
+  let ls = spawn('clisp', ['-x', '-q',  ,data])
   ls.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
   });
