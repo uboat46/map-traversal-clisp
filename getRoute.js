@@ -4,8 +4,11 @@ const util = require('util');
 const preprocess = require('./preprocess.js');
 
 function runFile(start, end) {
+  let response = '';
   let ls = spawn('clisp', ['-q','-i', './aStar/ASTAR.fas', '-x', `(look '${start} '${end})`])
+  
   ls.stdout.on('data', (data) => {
+    response = data;
     console.log(`stdout: ${data}`);
   });
   
@@ -16,6 +19,8 @@ function runFile(start, end) {
   ls.on('close', (code) => {
     console.log(`child process exited with code ${code}`);
   });
+
+  return response;
 }
 
 function run(start, end) {
