@@ -1,3 +1,3 @@
 #!/bin/bash
-echo hello
-#clisp -q -i /root/mapTraversalClisp/aStar/ASTAR.fas -x "(look '$1 '$2')"
+echo $1 $2
+#/usr/bin/clisp -q -i /root/mapTraversalClisp/aStar/ASTAR.fas -x "(look '$1 '$2')"
