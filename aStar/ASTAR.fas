@@ -420,9 +420,9 @@
         #Y(|COMMON-LISP-USER|::|LOOK-1|
            #38Y(00 00 00 00 02 00 00 00 21 18 DA B0 38 02 31 95 AF 2F 01 10 02
                 B1 B3 31 8D 11 AF 2F 03 DE B0 38 02 31 95 9E 19 04)
-           ("A-star-search solution: " |SYSTEM|::|STREAM-START-S-EXPRESSION|
+           ("solution: " |SYSTEM|::|STREAM-START-S-EXPRESSION|
             |COMMON-LISP|::|*PRINT-RIGHT-MARGIN*|
-            |SYSTEM|::|STREAM-END-S-EXPRESSION| ".\n")
+            |SYSTEM|::|STREAM-END-S-EXPRESSION| " } \n")
            (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
         |COMMON-LISP|::|*STANDARD-OUTPUT*| |COMMON-LISP-USER|::|A-STAR-SEARCH|
         #Y(|COMMON-LISP-USER|::|LOOK-2|
@@ -430,15 +430,15 @@
                 B1 B3 31 8D 11 AF 2F 03 DE B0 38 02 31 95 9E 19 04)
            ("Path-length: " |SYSTEM|::|STREAM-START-S-EXPRESSION|
             |COMMON-LISP|::|*PRINT-RIGHT-MARGIN*|
-            |SYSTEM|::|STREAM-END-S-EXPRESSION| ".\n")
+            |SYSTEM|::|STREAM-END-S-EXPRESSION| " } \n")
            (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
         |COMMON-LISP-USER|::|GET-F-VALUE|
         #Y(|COMMON-LISP-USER|::|LOOK-3|
-           #32Y(00 00 00 00 02 00 00 00 21 18 AF 2F 00 10 01 B1 B3 31 8D 11 AF
-                2F 02 DD B0 38 02 31 95 9E 19 04)
-           (|SYSTEM|::|STREAM-START-S-EXPRESSION|
+           #38Y(00 00 00 00 02 00 00 00 21 18 DA B0 38 02 31 95 AF 2F 01 10 02
+                B1 B3 31 8D 11 AF 2F 03 DE B0 38 02 31 95 9E 19 04)
+           ("nodes expanded: " |SYSTEM|::|STREAM-START-S-EXPRESSION|
             |COMMON-LISP|::|*PRINT-RIGHT-MARGIN*|
-            |SYSTEM|::|STREAM-END-S-EXPRESSION| " nodes expanded.\n")
+            |SYSTEM|::|STREAM-END-S-EXPRESSION| "} \n")
            (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
         |COMMON-LISP-USER|::|GET-COUNT|)
        (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)

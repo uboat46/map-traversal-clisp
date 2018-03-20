@@ -178,11 +178,11 @@
 
 (defun look (start end)
   (initialize-count)
-  (format t "A-star-search solution: ~s.~%"
+  (format t "solution: ~s } ~%"
     (a-star-search start end) )
-  (format t "Path-length: ~s.~%" 
+  (format t "Path-length: ~s } ~%" 
     (get-f-value end) )
-  (format t "~s nodes expanded.~%"
+  (format t "nodes expanded: ~s} ~%"
     (get-count) )
   )
 

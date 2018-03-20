@@ -5,11 +5,10 @@ const preprocess = require('./preprocess.js');
 
 function runFile(start, end, res) {
   let response = '';
-  let ls = spawn('clisp', ['-q','-i', './aStar/ASTAR.fas', '-x', `(look '${start} '${end})`])
+  let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`])
   
   ls.stdout.on('data', (data) => {
-    response += data;
-    res.status(200).send(response);
+    if(data.includes('}') || data.includes('(')) {response += data};
     console.log(`stdout: ${data}`);
   });
   
@@ -18,6 +17,8 @@ function runFile(start, end, res) {
   });
   
   ls.on('close', (code) => {
+    response = response.trim().replace('NIL', '').split('}').join(',').substring(0, response.trim().length - 6);
+    response = `{route:${response}}`;
     res.status(200).send(response);
     console.log(`child process exited with code ${code}`);
   });
