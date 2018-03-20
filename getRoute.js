@@ -8,7 +8,7 @@ function runFile(start, end, res) {
   
   //let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`]);
   //res.status(200).send(`${__dirname}/aStar/ASTAR.fas`);
-  let ls = spawn('/usr/bin/clisp', ['-q','-i', `/root/mapTraversalClisp/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`], {shell: true});
+  let ls = spawn('clisp', ['-q','-i', `/root/mapTraversalClisp/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`], {shell: true});
   ls.stdout.on('data', (data) => {
     //if(data.includes('}') || data.includes('(')) {response += data};
     response += data;
@@ -17,7 +17,7 @@ function runFile(start, end, res) {
   
   ls.stderr.on('data', (data) => {
    //console.log(`stderr: ${data}`);
-   ls.kill();
+   //ls.kill();
   });
   
   ls.on('close', (code) => {
