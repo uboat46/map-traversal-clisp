@@ -9,6 +9,7 @@ function runFile(start, end, res) {
   
   ls.stdout.on('data', (data) => {
     response += data;
+    res.status(200).send(response);
     console.log(`stdout: ${data}`);
   });
   
