@@ -1,2 +1,3 @@
 #!/bin/bash
-/usr/bin/clisp -q -x "(PRINT 'HELLO)"
+who
+#/usr/bin/clisp -q -x "(PRINT 'HELLO)"
