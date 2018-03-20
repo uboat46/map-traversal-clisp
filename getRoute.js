@@ -29,7 +29,8 @@ function runFile(start, end, res) {
 function run(start, end, res) {
   if(start.trim() != "" && end.trim() != "")
   {
-    runFile(start, end, res);
+    res.status(200).send("hello");
+    //runFile(start, end, res);
   }else {
     res.status(200).send('Please send arguments to run\n    ex. \n    node run.js rennes avignon');
   }
