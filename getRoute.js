@@ -4,7 +4,7 @@ const util = require('util');
 const preprocess = require('./preprocess.js');
 
 function runFile(start, end, res) {
-  res.status(200).send(response);
+  res.status(200).send("Helloooooo");
   let response = '';
   // let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`]);
   
