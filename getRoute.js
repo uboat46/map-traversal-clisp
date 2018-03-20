@@ -5,9 +5,9 @@ const preprocess = require('./preprocess.js');
 
 function runFile(start, end, res) {
   let response = '';
-  res.status(200).send(`${__dirname}/aStar/ASTAR.fas`);
-  // let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`]);
   
+  let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`]);
+  res.status(200).send(`${__dirname}/aStar/ASTAR.fas`);
   // ls.stdout.on('data', (data) => {
   //   if(data.includes('}') || data.includes('(')) {response += data};
   //   console.log(`stdout: ${data}`);
