@@ -5,6 +5,7 @@ const preprocess = require('./preprocess.js');
 
 function runFile(start, end, res) {
   let response = '';
+  console.log(`${__dirname}/aStar/ASTAR.fas`);
   let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`])
   
   ls.stdout.on('data', (data) => {
