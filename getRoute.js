@@ -8,7 +8,7 @@ function runFile(start, end, res) {
   
   //let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(look '${start} '${end})`]);
   //res.status(200).send(`${__dirname}/aStar/ASTAR.fas`);
-  let ls = spawn('clisp', ['-q','-i', `${__dirname}/aStar/ASTAR.fas`, '-x', `(PRINT 'HELLOOASDASD)`]);
+  let ls = spawn('clisp', ['-q','-i', `/root/map_traversal_clisp/aStar/ASTAR.fas`, '-x', `(PRINT 'HELLOOASDASD)`]);
   ls.stdout.on('data', (data) => {
     //if(data.includes('}') || data.includes('(')) {response += data};
     response += data;
