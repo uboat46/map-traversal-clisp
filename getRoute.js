@@ -19,8 +19,12 @@ function runFile(start, end) {
 }
 
 function run(start, end) {
-  return (start && end) ? 'Please send arguments to run\n    ex. \n    node run.js rennes avignon'
-  : runFile(start, end);
+  if(start.trim() != "" && end.trim() != "")
+  {
+    return runFile(start, end);
+  }else {
+    return 'Please send arguments to run\n    ex. \n    node run.js rennes avignon';
+  }
 }
 
 module.exports = run;
