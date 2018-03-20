@@ -17,7 +17,7 @@ function runFile(start, end, res) {
   });
   
   ls.stderr.on('data', (data) => {
-   //console.log(`stderr: ${data}`);
+   console.log(`stderr: ${data}`);
    //ls.kill();
   });
   
