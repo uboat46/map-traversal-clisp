@@ -1,2 +1,2 @@
 #!/bin/bash
-clisp -q -x "(PRINT 'HELLO')"
+/usr/bin/clisp -q -x "(PRINT 'HELLO')"
